@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doctor Video Call</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+    }
+    video {
+      width: 300px;
+      height: 225px;
+      border-radius: 10px;
+      margin: 10px;
+      border: 2px solid #888;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Doctor Video Call</h2>
+  <video id="localVideo" autoplay muted playsinline></video>
+  <video id="remoteVideo" autoplay playsinline></video>
+  <br />
+  <button onclick="startCall('room1')">Start Call</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
